@@ -1,34 +1,18 @@
 import React, { Component } from 'react'
+import ComponenteActualizado from './contadorHOC';
 
 class MiOtroBoton extends Component {
-
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            conteo: 0
-        }
-    }
-
-
-    incrementarConteo = () => {
-        this.setState(prevState => {
-            return { conteo: prevState.conteo + 1 }
-        })
-    }
-
-
     render() {
         return (
             <div>
                 <button
-                    onDoubleClick={this.incrementarConteo}
+                    onDoubleClick={this.props.incrementarConteo}
                     className='btn btn-primary'>
-                    Conteo de parejas {this.state.conteo}
+                    Conteo de parejas {this.props.conteo}
                 </button>
             </div>
         )
     }
 }
 
-export default MiOtroBoton
+export default ComponenteActualizado(MiOtroBoton)

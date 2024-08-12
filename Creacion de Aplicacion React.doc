@@ -95,3 +95,15 @@ eslint.config.js
 
 ,
   'react/prop-types':0
+
+
+Elementos Funciones que tiene React:
+
+1-Props
+2-Hooks [nameHook, setNameHook] = useState({
+        username: '',
+        email:'',
+        password: '',
+    });
+
+3- HOC(Hight Order Components)(Reutilizacion de Componentes, Funciones)

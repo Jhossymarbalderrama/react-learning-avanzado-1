@@ -4,7 +4,12 @@
 
 .App {  
   width: 100vw;
-  text-align: center;
+  text-align: center;    
+}
+
+
+.App div{
+  margin: 1rem;
 }
 
 .App-logo {
