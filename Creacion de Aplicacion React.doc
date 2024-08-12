@@ -101,9 +101,17 @@ Elementos Funciones que tiene React:
 
 1-Props
 2-Hooks [nameHook, setNameHook] = useState({
+        /*ACA ES LOS VALORES POR DEFAULT QUE VA CONTENER EL ATRIBUTO HOOK EN ESTE CASO "nameHooke"*/
         username: '',
         email:'',
         password: '',
     });
 
 3- HOC(Hight Order Components)(Reutilizacion de Componentes, Funciones)
+4- Boundaries: Manejadores de Errores: Parecidos a Throws, pero propios
+5- Portals:  Para trabajar secuencialmente en otro ambito como el proyecto esta trabajando en el root,
+    tenemos ahora el "portal" para trabajar fuera de nuestra aplicacion y hacer funcionalidades fuera de la app
+
+    5-1: Se genera un div en el index.html con id='portal'
+    5-2:
+    
