@@ -1,0 +1,97 @@
+React es una libreria: Utilizacion de React es en Framework Next.js - Remix - Gatsby - Vite
+
+Diferentes Opciones para Creacion de una Aplicacion React con Vite
+
+Metodo antiguo sin Framework:
+npx create-react-app my-app
+
+1) Metodo nuevo con Vite: 
+    npm create vite
+
+    1.1) yes / y
+    1.2) Name Project
+    1.3) Select Framework: React
+    1.4) Typescript
+
+    A) Como correr tu Project
+        cd myproject
+        npm i
+        npm run dev
+
+    B) Local: http://localhost:5173/
+
+2) Creacion de Componentes
+
+    2.1) En el directorio src> creamos components folder
+    2.2) Directorio especial para todos los Componentes
+
+3) Utilizacion de Props (Propiedades de React)
+
+    export default function MiBoton({texto}){
+        return (
+            <>
+                <button>
+                    {texto}
+                </button>
+            </>
+        )
+    }
+
+
+    function App() {
+    return (
+        <>
+        <MiBoton texto='Mi Botón'/>
+        </>
+    )
+    }
+
+4) Extensiones de React para VS Code
+
+    a-ES7+ React/Redux/React-Native snippets
+
+    4.1) Crear Componente
+        nfc snniper
+
+5) Herramienta para Navegador
+
+    5.1) React Developer Tools
+
+6) Componentes
+    6.1) Componentes Funcionales (Export Funciones)* Recomendado
+    6.2) Componentes de Clases (Export Clases)
+
+7) Estilos para Componentes (Creacion de componentes con estilos)
+
+Libreria StyleComponent:
+    Extension install:
+        npm install styled-components
+
+8) Instalar Framework de Estilo a React
+
+    Bootstrap: 
+    npm install bootstrap
+
+9) Instalar React-Router para Enrutamiento
+    React-Router: npm install react-router-dom
+
+10) Compilacion de Aplicacion React
+
+    npm run build
+
+11) Probar la aplicacion despues de buildear
+
+    npm run preview
+
+
+Tips Dominar React:
+-Hooks
+-Buenas practicas y arquitecturas
+-React Native (Para dispositivos)
+-React Frameworks (Next, Remix, Gatsby, Vite)
+
+
+eslint.config.js
+
+,
+  'react/prop-types':0
