@@ -18,6 +18,10 @@ export default function MiComponente(props) {
         setVisibleError(true);
     }
 
+    if(!props.title){
+        throw new Error("Error en MiComponente");        
+    }
+
     return (
         <div className='col-md-4'>
             <div className="card">
