@@ -6,6 +6,18 @@ export default class Components extends Component {
         event.preventDefault();
     }
 
+    onNombreInputChange = (event) =>{
+        console.log("Nombre:", event.target.value);
+    }
+
+    onApellidoInputChange= (event) =>{
+        console.log("Apellido:", event.target.value);
+    }
+
+    onHobbyInputChange= (event) =>{
+        console.log("Hobby:", event.target.value);
+    }
+
     render() {
         return (
             <>
@@ -15,17 +27,17 @@ export default class Components extends Component {
                         <div className="form-group">
                             <div className='item'>
                                 <label htmlFor="item1">Nombre:</label>
-                                <input type="text" className='form-control' name='item1' placeholder='Nombre' />
+                                <input type="text" className='form-control' name='item1' placeholder='Nombre' onChange={this.onNombreInputChange}/>
                             </div>
 
                             <div className='item'>
                             <label htmlFor="item2">Apellido:</label>
-                                <input type="text" name='item2' className='form-control' placeholder='Apellido' />
+                                <input type="text" name='item2' className='form-control' placeholder='Apellido' onChange={this.onApellidoInputChange}/>
                             </div>
 
                             <div className='item'>
                             <label htmlFor="item3">Hobby:</label>
-                                <input type="text" name='item3' className='form-control' placeholder='Hobby' />
+                                <input type="text" name='item3' className='form-control' placeholder='Hobby' onChange={this.onHobbyInputChange}/>
                             </div>
 
                             <button className='btn btn-primary' type='submit'>
