@@ -2,20 +2,33 @@ import React, { Component } from 'react'
 
 export default class Components extends Component {
 
+    constructor(props){
+        super(props);
+
+        this.state = {
+            item1: '',
+            item2: '',
+            item3: ''
+        };
+    }
+
     onSubmitHandler = (event) =>{
         event.preventDefault();
     }
 
-    onNombreInputChange = (event) =>{
-        console.log("Nombre:", event.target.value);
+    onNombreInputChange = (event) =>{ 
+        const valor = event.target.value;
+        this.setState({item1: valor})
     }
 
-    onApellidoInputChange= (event) =>{
-        console.log("Apellido:", event.target.value);
+    onApellidoInputChange= (event) =>{        
+        const valor = event.target.value;
+        this.setState({item2: valor})
     }
 
-    onHobbyInputChange= (event) =>{
-        console.log("Hobby:", event.target.value);
+    onHobbyInputChange= (event) =>{   
+        const valor = event.target.value;     
+        this.setState({item3: valor})
     }
 
     render() {
@@ -45,6 +58,10 @@ export default class Components extends Component {
                             </button>
                         </div>
                     </form>
+
+                    <h4>Nombre: {this.state.item1}</h4>
+                    <h4>Apellido: {this.state.item2}</h4>
+                    <h4>Hobby: {this.state.item3}</h4>
                 </div>
             </>
         );
