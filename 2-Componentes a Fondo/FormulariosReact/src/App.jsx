@@ -1,11 +1,12 @@
 import './App.css'
-import Components from './components/Components';
+import ComponenteFuncionalForm from './components/ComponenteFuncionalForm';
+import ComponentsClassForm from './components/ComponentsClassForm';
 
 function App() {
-
-  return (
+  return  (
     <>
-      <Components/>     
+      {/* ComponentsClassForm */}
+      <ComponenteFuncionalForm/>
     </>
   )
 }
