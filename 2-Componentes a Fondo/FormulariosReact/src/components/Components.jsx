@@ -16,19 +16,13 @@ export default class Components extends Component {
         event.preventDefault();
     }
 
-    onNombreInputChange = (event) =>{ 
+    onInputChange = (event) => {
         const valor = event.target.value;
-        this.setState({item1: valor})
-    }
+        const name = event.target.name;
 
-    onApellidoInputChange= (event) =>{        
-        const valor = event.target.value;
-        this.setState({item2: valor})
-    }
-
-    onHobbyInputChange= (event) =>{   
-        const valor = event.target.value;     
-        this.setState({item3: valor})
+        this.setState(
+            {[name]: valor}
+        )
     }
 
     render() {
@@ -40,17 +34,17 @@ export default class Components extends Component {
                         <div className="form-group">
                             <div className='item'>
                                 <label htmlFor="item1">Nombre:</label>
-                                <input type="text" className='form-control' name='item1' placeholder='Nombre' onChange={this.onNombreInputChange}/>
+                                <input type="text" className='form-control' name='item1' placeholder='Nombre' onChange={this.onInputChange}/>
                             </div>
 
                             <div className='item'>
                             <label htmlFor="item2">Apellido:</label>
-                                <input type="text" name='item2' className='form-control' placeholder='Apellido' onChange={this.onApellidoInputChange}/>
+                                <input type="text" name='item2' className='form-control' placeholder='Apellido' onChange={this.onInputChange}/>
                             </div>
 
                             <div className='item'>
                             <label htmlFor="item3">Hobby:</label>
-                                <input type="text" name='item3' className='form-control' placeholder='Hobby' onChange={this.onHobbyInputChange}/>
+                                <input type="text" name='item3' className='form-control' placeholder='Hobby' onChange={this.onInputChange}/>
                             </div>
 
                             <button className='btn btn-primary' type='submit'>
@@ -58,6 +52,9 @@ export default class Components extends Component {
                             </button>
                         </div>
                     </form>
+
+                    <br />
+                    <hr />
 
                     <h4>Nombre: {this.state.item1}</h4>
                     <h4>Apellido: {this.state.item2}</h4>
